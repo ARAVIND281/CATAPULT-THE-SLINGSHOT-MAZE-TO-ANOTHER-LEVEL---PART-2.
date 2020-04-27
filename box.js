@@ -1,5 +1,5 @@
 class Box{
-  constructor(x, y, width, height){
+  constructor(x, y, width, height,c){
       var options = {
           'restitution':0.8,
           'friction':1.0,
@@ -8,7 +8,7 @@ class Box{
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
       this.height = height;
-      //this.color=color;
+      this.c=c;
       World.add(world, this.body);
     }
     display(){
@@ -16,7 +16,7 @@ class Box{
       push();
       translate(this.body.position.x, this.body.position.y);
       rotate(angle);
-      fill(0,255,255);
+      fill(this.c);
       rectMode(CENTER);
       rect(0, 0, this.width, this.height);
       pop();

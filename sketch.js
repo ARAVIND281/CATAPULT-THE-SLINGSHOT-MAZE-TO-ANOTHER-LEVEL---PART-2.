@@ -21,7 +21,7 @@ function setup(){
         box1 = new Box(i*20,150,20,20);
             
         }
-    box2 = new Box(800,150,20,20);
+    box2 = new Box(800,200,20,20,255);
     /*
     log1 = new Log(810,260,300, PI/2);
 
